@@ -1,129 +1,116 @@
-.profile {
+.content {
   display: flex;
-  flex-grow: 1;
-  background-color: #212121;
-
-  .profile__information {
-    flex-direction: column;
-    padding: 0px 70px;
-    flex-grow: 1;
-
-    .profile__information_main {
+  flex-direction: column;
+  margin: auto;
+  & .profile {
+    display: flex;
+    flex-direction: row;
+    & .avatar {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+      margin: 10px;
+      width: 270px;
+      min-height: 330px;
+      padding: 10px;
+      background-color: #2F2F2F;
+      border: 1px solid #595959;
+      border-radius: 10px;
 
-      .profile__information__avatar {
-        display: flex;
-        flex-direction: column;
-        margin: 0px 15px;
-        height: 300px;
-        max-width: 200px;
-        border-radius: 10px;
-        flex-grow: 1;
-        border: 1px solid #595959;
-
-        div {
-          border-radius: 3px;
-          margin: auto auto;
-          width: 180px;
-          height: 230px;
-        }
-
-        .profile__information__avatar_image {
-          overflow: hidden;
-        }
-
-        .profile__information__avatar__photo {
-          max-width: 100%;
-        }
-
-
-        button {
-          border: none;
-          background-color: #595959;
-          color: #EEEEEE;
-          border-radius: 5px;
-          margin: auto auto;
-          height: 35px;
-          width: 90%;
-        }
-
-        button:hover {
-          background-color: #2A9DF0;
-          transition: 0.3s ease;
-        }
-
+      & img {
+        max-width: 100%;
+        object-fit: contain;
+        border-radius: 5px;
       }
 
-      .profile__information__data {
-        margin: 0px 15px;
-        width: 60%;
-        border-radius: 10px;
-        flex-grow: 1;
-        border: 1px solid #595959;
+      & button {
+        margin: 0px auto;
+        width: 270px;
+        height: 30px;
+        background: #595959;
+        border: none;
+        border-radius: 5px;
+        color: #EEEEEE;
 
-        .profile__information__data__name {
-          padding: 20px 30px 5px 30px;
-          color: #EEEEEE;
-          font-size: 20px;
-          font-weight: 500;
-        }
-
-        .profile__information__data__info {
-          ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-          }
-
-          li {
-            padding: 10px;
-          }
-
-          li span {
-            margin-left: 10px;
-          }
-
-          li span a {
-            text-decoration: none;
-            color: #2A9DF0;
-          }
-
-          padding: 20px 30px 5px 30px;
-          color: #EEEEEE;
+        &:hover {
+          background-color: #EEEEEE;
+          color: #2F2F2F;
+          transition: 0.2s ease;
         }
       }
     }
+    & .info {
+      display: flex;
+      flex-direction: column;
+      height: 250px;
+      min-width: 290px;
+      margin: 10px;
+      background-color: #2F2F2F;
+      border: 1px solid #595959;
+      border-radius: 10px;
 
-    .profile__information__posts {
-      margin: 50px 15px;
-
-      .profile__information__posts__add {
-        border: 1px solid #595959;
-        border-radius: 10px;
-        flex-grow: 1;
+      & > span {
+        padding: 20px 40px;
+        font-size: 20px;
+        font-weight: 500;
         color: #EEEEEE;
-        padding: 20px;
+      }
+      & ul {
+        margin:0;
+        padding: 0;
+        text-indent: 0;
+        list-style-type: none;
+
+        & li {
+          padding: 10px 10px 10px 40px ;
+          color: #EEEEEE;
+
+          & img {
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+  }
+  & .posts {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    max-width: 604px;
+
+    & .posts__add {
+      padding: 10px;
+      border: 1px solid #595959;
+      border-radius: 10px;
+      color: #EEEEEE;
+    }
+
+    & .posts__post {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #595959;
+      border-radius: 10px;
+
+      & > span {
+        padding: 15px 0px 0px 10px;
+        color: #EEEEEE;
+        font-size: 18px;
+        font-weight: 500;
       }
 
-      .profile__information__posts__post {
-        display: flex;
-        border: 1px solid #595959;
-        margin-top: 30px;
-        border-radius: 10px;
-        flex-grow: 1;
+      & > p {
+        padding: 0px 10px;
         color: #EEEEEE;
-        padding: 20px;
       }
-
     }
   }
 }
 
-@media (max-width: 992px) {
-
-  .profile__information {
-    padding: 20px;
-    flex-direction: column;
+@media only screen and (max-width: 715px) {
+  .content  {
+    .profile {
+      flex-direction: column;
+    }
   }
 }
