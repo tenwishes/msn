@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap');
+* {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+body {
+    background-color: #212121;
+}
+.wrapper {
+    display: flex;
+    max-width: 1280px;
+    min-height: calc(100vh - 65px);
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+@media only screen and (max-width: 992px) {
+    .wrapper {
+        flex-direction: column-reverse;
+    }
+}
