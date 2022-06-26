@@ -1,0 +1,57 @@
+.profile {
+  display: flex;
+
+  & .avatar {
+    display: flex;
+    width: 270px;
+    padding: 10px;
+    background-color: #2F2F2F;
+
+    & img {
+      height: 270px;
+      width: 230px;
+      border-radius: 5px;
+    }
+  }
+
+  & .info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #2F2F2F;
+
+    & > span {
+      padding: 20px 40px;
+      font-size: 20px;
+      font-weight: 500;
+      color: #EEEEEE;
+    }
+
+    & ul {
+      margin: 0;
+      padding: 0;
+      text-indent: 0;
+      list-style-type: none;
+
+      & li {
+        padding: 10px 10px 10px 40px;
+        color: #EEEEEE;
+
+        & img {
+          padding-right: 10px;
+
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .profile {
+    flex-direction: column;
+
+    & .info {
+      max-width: 290px;
+    }
+  }
+}

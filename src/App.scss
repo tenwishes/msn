@@ -11,12 +11,6 @@ body {
 .wrapper {
     display: flex;
     max-width: 1280px;
-    margin: 0 auto;
-    padding-top: 30px;
-}
-
-@media only screen and (max-width: 992px) {
-    .wrapper {
-        flex-direction: column-reverse;
-    }
+    margin: 0px auto;
+    padding-top: 20px;
 }

@@ -1,0 +1,28 @@
+.companion {
+  padding: 12px 5px;
+  margin: 2px;
+
+  & a {
+    display: flex;
+    text-decoration: none;
+    padding: 5px 10px;
+    color: #EEEEEE;
+    align-items: center;
+    border-radius: 10px;
+
+    & img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    & span {
+      padding-left: 10px;
+    }
+
+    &.active {
+      background-color: #2F2F2F;
+    }
+  }
+}

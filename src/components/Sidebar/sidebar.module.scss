@@ -1,0 +1,46 @@
+.sidebar {
+  flex-direction: column;
+  height: fit-content;
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    & li {
+      margin:0;
+      text-indent: 0;
+      list-style-type: none;
+      padding: 2px 0px;
+
+      & a {
+        display: flex;
+        padding: 5px 20px;
+        align-items: center;
+
+        text-decoration: none;
+        border-radius: 8px;
+        color: #EEEEEE;
+
+        & div {
+          display: flex;
+          align-items: center;
+          padding-right: 10px;
+        }
+
+        & span {
+
+        }
+
+        &:hover {
+          background-color: #2F2F2F;
+        }
+
+        &.active {
+          background-color: #2F2F2F;
+        }
+      }
+    }
+  }
+}
+
+
