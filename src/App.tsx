@@ -17,27 +17,27 @@ type AppPropsType = {
 function App(props: AppPropsType) {
     const state = props.state
     return (
-        <BrowserRouter>
-                <Header/>
-                <div className='wrapper'>
-                    <Sidebar/>
-                    <Route path='/dialogs'>
-                        <Dialogs dialogs={state.dialogsPage.dialogs} messages={state.dialogsPage.messages} />
-                    </Route>
-                    <Route path='/profile'>
-                        <Profile posts={state.profilePage.posts}/>
-                    </Route>
-                    <Route path='/news'>
-                        <News />
-                    </Route>
-                    <Route path='/music'>
-                        <Music />
-                    </Route>
-                    <Route path='/settings'>
-                        <Settings />
-                    </Route>
-                </div>
-        </BrowserRouter>
+        <>
+            <Header/>
+            <div className='wrapper'>
+                <Sidebar/>
+                <Route path='/dialogs'>
+                    <Dialogs dialogs={state.dialogsPage.dialogs} messages={state.dialogsPage.messages} />
+                </Route>
+                <Route path='/profile'>
+                    <Profile posts={state.profilePage.posts}/>
+                </Route>
+                <Route path='/news'>
+                    <News />
+                </Route>
+                <Route path='/music'>
+                    <Music />
+                </Route>
+                <Route path='/settings'>
+                    <Settings />
+                </Route>
+            </div>
+        </>
     );
 }
 

@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import 'normalize.css';
 import './index.css';
 import App from './App';
+import {BrowserRouter} from "react-router-dom";
 import {state} from "./redux/state";
 
 
 ReactDOM.render(
-    <App state={state}/>,
-  document.getElementById('root')
+    <BrowserRouter>
+        <App state={state}/>
+    </BrowserRouter>, document.getElementById('root')
 );
