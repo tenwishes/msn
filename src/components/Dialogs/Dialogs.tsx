@@ -1,42 +1,40 @@
 import React from "react";
 import s from './Dialogs.module.scss'
-import {Companion, CompanionPropsType} from "./Companion/Companion";
+import {Companion} from "./Companion/Companion";
 import {Message} from "./Message/Message";
-import {NavLink} from "react-router-dom";
+import {MessagesType} from "../../redux/state";
+import {DialogsType} from "../../redux/state";
 
 type DialogsPropsType = {
-    users: CompanionPropsType[]
+    dialogs: Array<DialogsType>
+    messages: Array<MessagesType>
 }
 
 export function Dialogs(props: DialogsPropsType) {
+    const dialogs = props.dialogs
+    const messages = props.messages
+
     return (
         <div className={s.dialogs}>
-            <div className={s.companions}>
+            <ul className={s.companions}>
                 {
-                    props.users.map( (el, index) => {
+                    dialogs.map((u) => {
                         return (
-                            <>
-                                <Companion
-                                    id={el.id}
-                                    name={el.name}
-                                    surname={el.surname}
-                                    avatar={el.avatar}
-                                />
-                            </>
+                            <li key={u.id}>
+                                <Companion id={u.id} name={u.name} surname={u.surname} avatar={u.avatar} />
+                            </li>
                         )
                     })
                 }
-            </div>
+            </ul>
             <div className={s.messages}>
-                <Message
-                    text={"Lorksdnfakhjshgsdfjhgjkdfhkldfjhglkjfh"}
-                />
-                <Message
-                    text={"hay"}
-                />
-                <Message
-                    text={"Huy"}
-                />
+                {
+                    messages.map((m) => {
+                        return (
+                            <Message id={m.id} message={m.message} key={m.id}/>
+                        )
+                    })
+                }
             </div>
         </div>
     )

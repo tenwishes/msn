@@ -1,13 +1,9 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 import s from "./Companion.module.scss";
+import {DialogsType} from "../../../redux/state";
 
-export type CompanionPropsType = {
-    id: number
-    name: string
-    surname: string
-    avatar: string
-}
+type CompanionPropsType = DialogsType
 
 export function Companion(props: CompanionPropsType) {
     let path = "/dialogs/" + props.id

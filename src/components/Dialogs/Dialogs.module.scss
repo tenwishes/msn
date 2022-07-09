@@ -3,17 +3,12 @@
     margin: 0px auto;
 
     & .companions {
-        flex-direction: column;
-        border-radius: 10px;
-        border: 1px solid #595959;
-        margin-right: 10px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
     }
 
     & .messages {
-        padding: 10px;
-        border-radius: 10px;
-        border: 1px solid #595959;
-        width: 500px;
-        height: 600px;
+
     }
 }
