@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/tenwishes/smr-way/static/css/main.45e81e20.css",
-    "main.js": "/tenwishes/smr-way/static/js/main.1ae5f7a5.js",
-    "static/media/logo.svg": "/tenwishes/smr-way/static/media/logo.a3b0f97fc3d93d5c521bd9a8ff8097dc.svg",
-    "static/media/link.svg": "/tenwishes/smr-way/static/media/link.5e3d1f3ff59b0acbf5779b7b5081b161.svg",
-    "static/media/dob.svg": "/tenwishes/smr-way/static/media/dob.9d52ed5b958a1ec601fae69a2aa2bd6e.svg",
-    "static/media/education.svg": "/tenwishes/smr-way/static/media/education.a09cb2eb6acedaec781cee148e5512e8.svg",
-    "static/media/city.svg": "/tenwishes/smr-way/static/media/city.99fa41418e12e7f7136a0b998098b658.svg",
-    "index.html": "/tenwishes/smr-way/index.html",
-    "main.45e81e20.css.map": "/tenwishes/smr-way/static/css/main.45e81e20.css.map",
-    "main.1ae5f7a5.js.map": "/tenwishes/smr-way/static/js/main.1ae5f7a5.js.map"
+    "main.css": "/smr-way/static/css/main.45e81e20.css",
+    "main.js": "/smr-way/static/js/main.e8fd215d.js",
+    "static/media/logo.svg": "/smr-way/static/media/logo.a3b0f97fc3d93d5c521bd9a8ff8097dc.svg",
+    "static/media/link.svg": "/smr-way/static/media/link.5e3d1f3ff59b0acbf5779b7b5081b161.svg",
+    "static/media/dob.svg": "/smr-way/static/media/dob.9d52ed5b958a1ec601fae69a2aa2bd6e.svg",
+    "static/media/education.svg": "/smr-way/static/media/education.a09cb2eb6acedaec781cee148e5512e8.svg",
+    "static/media/city.svg": "/smr-way/static/media/city.99fa41418e12e7f7136a0b998098b658.svg",
+    "index.html": "/smr-way/index.html",
+    "main.45e81e20.css.map": "/smr-way/static/css/main.45e81e20.css.map",
+    "main.e8fd215d.js.map": "/smr-way/static/js/main.e8fd215d.js.map"
   },
   "entrypoints": [
     "static/css/main.45e81e20.css",
-    "static/js/main.1ae5f7a5.js"
+    "static/js/main.e8fd215d.js"
   ]
 }
