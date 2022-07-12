@@ -1,10 +1,15 @@
+import {useState} from "react";
+import {renderEntireTree} from "../render";
+
 export type MessagesType = {
     id: number
     message: string
 }
 export type PostsType = {
+    id: number
     name: string
     text: string
+    likes: number
 }
 export type DialogsType = {
     id: number
@@ -29,9 +34,9 @@ export type StateType = {
 export let state: StateType = {
     profilePage: {
         posts: [
-            {name: "Aiya Abe", text: "I like sushi"},
-            {name: "Aiya Abe", text: "<3"},
-            {name: "Aiya Abe", text: ":D"}
+            {id: 1, name: "Aiya Abe", text: "I like sushi", likes: 1},
+            {id: 2, name: "Aiya Abe", text: "<3",  likes: 0},
+            {id: 3, name: "Aiya Abe", text: ":D",  likes: 2}
         ]
     },
     dialogsPage: {
@@ -98,4 +103,15 @@ export let state: StateType = {
             {id: 4, message: "I'm fine!"},
         ]
     }
+}
+
+export const addPost = (name: string, text: string) => {
+    let newPost = {
+        id: state.profilePage.posts.length + 1,
+        name: name,
+        text: text,
+        likes: 0
+    }
+    state.profilePage.posts.push(newPost)
+    renderEntireTree(state)
 }

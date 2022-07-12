@@ -7,25 +7,30 @@ import {Dialogs} from "./components/Dialogs/Dialogs";
 import {News} from "./components/News/News";
 import {Music} from "./components/Music/Music";
 import {Settings} from "./components/Settings/Settings";
-import {Route, BrowserRouter} from "react-router-dom";
+import {Route} from "react-router-dom";
 import {StateType} from "./redux/state";
 
 type AppPropsType = {
     state: StateType
+    addPost: (name: string, text: string) => void
 }
 
 function App(props: AppPropsType) {
-    const state = props.state
+    const {dialogsPage, profilePage} = props.state
     return (
         <>
             <Header/>
             <div className='wrapper'>
                 <Sidebar/>
                 <Route path='/dialogs'>
-                    <Dialogs dialogs={state.dialogsPage.dialogs} messages={state.dialogsPage.messages} />
+                    <Dialogs
+                        dialogs={dialogsPage.dialogs}
+                        messages={dialogsPage.messages} />
                 </Route>
                 <Route path='/profile'>
-                    <Profile posts={state.profilePage.posts}/>
+                    <Profile
+                        posts={profilePage.posts}
+                        addPost={props.addPost}/>
                 </Route>
                 <Route path='/news'>
                     <News />
